@@ -1,0 +1,54 @@
+@using WordGuess.Models
+@model WordGuess.Models.Word;
+
+
+<div>
+    Game Page
+</div>
+
+<hr/>
+<div>
+
+    <table class="table table-hover">
+    <thead>
+        <tr>
+        
+        <th scope="col">This is your word to guess. Word category is @Model.Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>            
+            <td>@Model.Value</td>
+        </tr>
+         
+      
+    </tbody>
+</table>
+
+<form asp-action="Enter">
+    
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+        @* <label class="input-group-text" >Type one letter:</label> *@
+        <input type="text" value = "@Model.Category" asp-for="@Model.Category">
+        <input type="text" value = "@Model.Value" asp-for="@Model.Value">
+        <input type="text" value = "@Model.InitialWord" asp-for="@Model.InitialWord">
+        
+        <input type="text" class="form-control" maxlength="1" placeholder="Enter a letter . . . &#x23ce;" asp-for="Letter" value=""  >
+        @* <input type="text" visibility="none" visible="no" asp-for="Category" value="@Model.Category"> *@
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+@* <div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Type one letter</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+</div>   *@
+
+
+</div>

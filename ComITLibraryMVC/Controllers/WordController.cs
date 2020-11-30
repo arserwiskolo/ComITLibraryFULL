@@ -7,46 +7,78 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WordGuess.Models;
 
-namespace mvcsample.Controllers
+namespace ComITLibraryMVC.Controllers
 {
     // public class Word{
     //     public string Value {get; set;}
     //     public string Category{get; set;}
     // }
-    public class WordController : Controller
+    public  class WordController : Controller
     {
+        private static WordGuess.WordGuessSystem _library;
         
-        public WordController()
+        public WordController(WordGuess.WordGuessSystem library)
         {
-           
+           _library = library;
         }
 
         public IActionResult Index()
         {
-              List<Word> myWords = new List<Word>();
-                myWords.Add(new Word(){
-                    Category = "People name",
-                    Value = "Amanda"
 
-                });
-
-                myWords.Add(new Word(){
-                Category = "People name",
-                Value = "Anakonda"
-
-                });
-
-                myWords.Add(new Word(){
-                Category = "People name",
-                Value = "Adam"
-
-                });
-
-            var myView = View(myWords);
-            return myView;
+            // call library system. 
+            // get list of all books. 
+            var words = _library.GetAllWords();
+            return View(words);
         }
 
-        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [HttpGet]
+        public IActionResult Form(){
+            return View();
+        }
+        
+        [HttpGet]
+        public IActionResult Game(Word selectedWord){
+            Word gameWord = new Word();
+            if(selectedWord.Value is null){
+                var wordIndex = _library.RandomNumber(1, 12);
+                List<Word> wordList = _library.GetAllWords();
+                gameWord.InitialWord = selectedWord.Value;
+                gameWord = _library.HideLetters(wordIndex, wordList);
+            } 
+            else{
+                gameWord.Category = selectedWord.Category;
+                gameWord.InitialWord = selectedWord.InitialWord;
+                gameWord.Value = selectedWord.Value;
+            }     
+            return View(gameWord);            
+        }
+
+
+        [HttpPost]
+        public IActionResult Enter(Word selectedWord){
+            char letter = selectedWord.Letter;
+            Boolean letterFound = _library.FindLetterInWord(letter, selectedWord);
+            Word newWord = new Word();
+            newWord.Category = selectedWord.Category;
+            newWord.InitialWord = selectedWord.InitialWord;
+            if (letterFound){
+               newWord = _library.exposeLetters(letter, selectedWord, selectedWord.Value);
+            }
+            else {
+                newWord=selectedWord;
+            }
+        return RedirectToAction("Game", newWord);
+
+        }
+
+
+        [HttpPost]
+        public IActionResult Create(Word newWord){
+            _library.AddNewWord(newWord);
+            return RedirectToAction("Index");
+        }
+
+        // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         // public IActionResult Error()
         // {
         //     return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

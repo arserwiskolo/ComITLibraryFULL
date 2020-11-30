@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WordGuess;
+using WordGuess.Storage;
+using WordGuess.Models;
+
 
 namespace ComITLibraryMVC
 {
@@ -24,6 +28,12 @@ namespace ComITLibraryMVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            // dependecies injection
+            var wordStorage = new WordStorageList();
+            var playerStorage = new PlayerStorageList();
+            var library = new WordGuess.WordGuessSystem(wordStorage, playerStorage);
+
+            services.AddSingleton<WordGuess.WordGuessSystem>(library);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

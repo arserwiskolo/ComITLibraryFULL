@@ -14392,6 +14392,16 @@
   "RootNamespace": "ComITLibraryMVC",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\Views\\Word\\game.cshtml",
+      "TargetPath": "Views\\Word\\game.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\Views\\Word\\Form.cshtml",
+      "TargetPath": "Views\\Word\\Form.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"

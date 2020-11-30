@@ -39,3 +39,5 @@ C:\Users\serwi\Documents\ComITLibraryFull\comitlibraryMVC\obj\Debug\netcoreapp3.
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibraryMVC\obj\Debug\netcoreapp3.1\ComITLibraryMVC.pdb
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibraryMVC\obj\Debug\netcoreapp3.1\ComITLibraryMVC.genruntimeconfig.cache
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibraryMVC\obj\Debug\netcoreapp3.1\Razor\Views\Word\index.cshtml.g.cs
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibraryMVC\obj\Debug\netcoreapp3.1\Razor\Views\Word\game.cshtml.g.cs
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibraryMVC\obj\Debug\netcoreapp3.1\Razor\Views\Word\Form.cshtml.g.cs
