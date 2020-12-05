@@ -2,9 +2,67 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "EntityFramework/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Npgsql/2.2.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Mono.Security.dll": {},
+          "lib/net45/Npgsql.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Mono.Security.dll": {},
+          "lib/net45/Npgsql.dll": {}
+        },
+        "resource": {
+          "lib/net45/de/Npgsql.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/es/Npgsql.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fi/Npgsql.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net45/fr/Npgsql.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/ja/Npgsql.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/zh-CN/Npgsql.resources.dll": {
+            "locale": "zh-CN"
+          }
+        }
+      },
+      "Npgsql.EntityFramework/2.2.7": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.0.0",
+          "Npgsql": "[2.2.7]"
+        },
+        "compile": {
+          "lib/net45/Npgsql.EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Npgsql.EntityFramework.dll": {}
+        }
+      },
       "WordGuess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Npgsql.EntityFramework": "2.2.7"
+        },
         "compile": {
           "bin/placeholder/WordGuess.dll": {}
         },
@@ -15,6 +73,100 @@
     }
   },
   "libraries": {
+    "EntityFramework/6.0.0": {
+      "sha512": "y6lX/VMghGBV6TvgQS4Q2WK6kAcOoyD+TQxObN9utd0JsMMdMxyqARxKbvgi7KEIbQ8osZ4ZvImaly7l3NDFDw==",
+      "type": "package",
+      "path": "entityframework/6.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/App.config.transform",
+        "Content/Web.config.transform",
+        "entityframework.6.0.0.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "tools/EntityFramework.PowerShell.Utility.dll",
+        "tools/EntityFramework.PowerShell.dll",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/about_EntityFramework.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/migrate.exe"
+      ]
+    },
+    "Npgsql/2.2.7": {
+      "sha512": "iFcCEaAqHJLUxrjFa2+l2cWEQ44sC2L2qapu5BAbewqxvOH9imo0mZVxm9VWjbIJw2RvYOKXeYPk/Ov809c1vQ==",
+      "type": "package",
+      "path": "npgsql/2.2.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Mono.Security.dll",
+        "lib/net20/Npgsql.dll",
+        "lib/net20/Npgsql.xml",
+        "lib/net20/de/Npgsql.resources.dll",
+        "lib/net20/es/Npgsql.resources.dll",
+        "lib/net20/fi/Npgsql.resources.dll",
+        "lib/net20/fr/Npgsql.resources.dll",
+        "lib/net20/ja/Npgsql.resources.dll",
+        "lib/net20/zh-CN/Npgsql.resources.dll",
+        "lib/net35/Mono.Security.dll",
+        "lib/net35/Npgsql.dll",
+        "lib/net35/Npgsql.xml",
+        "lib/net35/de/Npgsql.resources.dll",
+        "lib/net35/es/Npgsql.resources.dll",
+        "lib/net35/fi/Npgsql.resources.dll",
+        "lib/net35/fr/Npgsql.resources.dll",
+        "lib/net35/ja/Npgsql.resources.dll",
+        "lib/net35/zh-CN/Npgsql.resources.dll",
+        "lib/net40/Mono.Security.dll",
+        "lib/net40/Npgsql.dll",
+        "lib/net40/Npgsql.xml",
+        "lib/net40/de/Npgsql.resources.dll",
+        "lib/net40/es/Npgsql.resources.dll",
+        "lib/net40/fi/Npgsql.resources.dll",
+        "lib/net40/fr/Npgsql.resources.dll",
+        "lib/net40/ja/Npgsql.resources.dll",
+        "lib/net40/zh-CN/Npgsql.resources.dll",
+        "lib/net45/Mono.Security.dll",
+        "lib/net45/Npgsql.dll",
+        "lib/net45/Npgsql.xml",
+        "lib/net45/de/Npgsql.resources.dll",
+        "lib/net45/es/Npgsql.resources.dll",
+        "lib/net45/fi/Npgsql.resources.dll",
+        "lib/net45/fr/Npgsql.resources.dll",
+        "lib/net45/ja/Npgsql.resources.dll",
+        "lib/net45/zh-CN/Npgsql.resources.dll",
+        "npgsql.2.2.7.nupkg.sha512",
+        "npgsql.nuspec"
+      ]
+    },
+    "Npgsql.EntityFramework/2.2.7": {
+      "sha512": "6G0AGtSD8KeMaqyB9zJQXtUpW8LTdiSULmYuQxvQty2OmK90x8VNkAuwhN4VLKjsKPfiiPfDZ0iEf3RYisg9xA==",
+      "type": "package",
+      "path": "npgsql.entityframework/2.2.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Npgsql.EntityFramework.dll",
+        "lib/net40/Npgsql.EntityFramework.xml",
+        "lib/net45/Npgsql.EntityFramework.dll",
+        "lib/net45/Npgsql.EntityFramework.xml",
+        "npgsql.entityframework.2.2.7.nupkg.sha512",
+        "npgsql.entityframework.nuspec",
+        "tools/install.ps1"
+      ]
+    },
     "WordGuess/1.0.0": {
       "type": "project",
       "path": "../wordguess/WordGuess.csproj",
@@ -23,6 +175,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Npgsql.EntityFramework >= 2.2.7",
       "WordGuess >= 1.0.0"
     ]
   },
@@ -33,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibraryMVC\\ComITLibraryMVC.csproj",
+      "projectUniqueName": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj",
       "projectName": "ComITLibraryMVC",
-      "projectPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibraryMVC\\ComITLibraryMVC.csproj",
+      "projectPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj",
       "packagesPath": "C:\\Users\\serwi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibraryMVC\\obj\\",
+      "outputPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -71,6 +224,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "Npgsql.EntityFramework": {
+            "target": "Package",
+            "version": "[2.2.7, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -92,5 +251,37 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework 6.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Npgsql 2.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Npgsql",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Npgsql.EntityFramework 2.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Npgsql.EntityFramework",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

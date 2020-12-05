@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "ComITLibraryMVC/1.0.0": {
         "dependencies": {
+          "Npgsql.EntityFramework": "2.2.7",
           "WordGuess": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -315,7 +316,77 @@
           "ComITLibraryMVC.dll": {}
         }
       },
+      "EntityFramework/6.0.0": {
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.20911.0"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.20911.0"
+          }
+        },
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Npgsql/2.2.7": {
+        "runtime": {
+          "lib/net45/Mono.Security.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          },
+          "lib/net45/Npgsql.dll": {
+            "assemblyVersion": "2.2.7.0",
+            "fileVersion": "2.2.7.0"
+          }
+        },
+        "resources": {
+          "lib/net45/de/Npgsql.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/es/Npgsql.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fi/Npgsql.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net45/fr/Npgsql.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/ja/Npgsql.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/zh-CN/Npgsql.resources.dll": {
+            "locale": "zh-CN"
+          }
+        },
+        "compile": {
+          "lib/net45/Mono.Security.dll": {},
+          "lib/net45/Npgsql.dll": {}
+        }
+      },
+      "Npgsql.EntityFramework/2.2.7": {
+        "dependencies": {
+          "EntityFramework": "6.0.0",
+          "Npgsql": "2.2.7"
+        },
+        "runtime": {
+          "lib/net45/Npgsql.EntityFramework.dll": {
+            "assemblyVersion": "2.2.7.0",
+            "fileVersion": "2.2.7.0"
+          }
+        },
+        "compile": {
+          "lib/net45/Npgsql.EntityFramework.dll": {}
+        }
+      },
       "WordGuess/1.0.0": {
+        "dependencies": {
+          "Npgsql.EntityFramework": "2.2.7"
+        },
         "runtime": {
           "WordGuess.dll": {}
         },
@@ -2022,6 +2093,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "EntityFramework/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y6lX/VMghGBV6TvgQS4Q2WK6kAcOoyD+TQxObN9utd0JsMMdMxyqARxKbvgi7KEIbQ8osZ4ZvImaly7l3NDFDw==",
+      "path": "entityframework/6.0.0",
+      "hashPath": "entityframework.6.0.0.nupkg.sha512"
+    },
+    "Npgsql/2.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iFcCEaAqHJLUxrjFa2+l2cWEQ44sC2L2qapu5BAbewqxvOH9imo0mZVxm9VWjbIJw2RvYOKXeYPk/Ov809c1vQ==",
+      "path": "npgsql/2.2.7",
+      "hashPath": "npgsql.2.2.7.nupkg.sha512"
+    },
+    "Npgsql.EntityFramework/2.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6G0AGtSD8KeMaqyB9zJQXtUpW8LTdiSULmYuQxvQty2OmK90x8VNkAuwhN4VLKjsKPfiiPfDZ0iEf3RYisg9xA==",
+      "path": "npgsql.entityframework/2.2.7",
+      "hashPath": "npgsql.entityframework.2.2.7.nupkg.sha512"
     },
     "WordGuess/1.0.0": {
       "type": "project",

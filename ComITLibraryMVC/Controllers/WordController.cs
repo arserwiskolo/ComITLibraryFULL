@@ -24,9 +24,6 @@ namespace ComITLibraryMVC.Controllers
 
         public IActionResult Index()
         {
-
-            // call library system. 
-            // get list of all books. 
             var words = _library.GetAllWords();
             return View(words);
         }
@@ -63,11 +60,12 @@ namespace ComITLibraryMVC.Controllers
             newWord.InitialWord = selectedWord.InitialWord;
             if (letterFound){
                newWord = _library.exposeLetters(letter, selectedWord, selectedWord.Value);
+               newWord.Message = "Congratulations, you have found a letter!.";
             }
             else {
                 newWord=selectedWord;
             }
-        return RedirectToAction("Game", newWord);
+        return View("Game", newWord);
 
         }
 

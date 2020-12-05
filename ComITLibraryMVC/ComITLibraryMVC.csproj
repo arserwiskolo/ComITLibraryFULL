@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <ItemGroup>
-    <ProjectReference Include="..\wordguess\WordGuess.csproj" />
+    <ProjectReference Include="..\wordguess\WordGuess.csproj"/>
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFramework" Version="2.2.7"/>
+  </ItemGroup>
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
 </Project>

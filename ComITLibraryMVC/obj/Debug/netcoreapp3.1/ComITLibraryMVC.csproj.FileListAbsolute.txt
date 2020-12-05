@@ -41,3 +41,14 @@ C:\Users\serwi\Documents\ComITLibraryFull\comitlibraryMVC\obj\Debug\netcoreapp3.
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibraryMVC\obj\Debug\netcoreapp3.1\Razor\Views\Word\index.cshtml.g.cs
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibraryMVC\obj\Debug\netcoreapp3.1\Razor\Views\Word\game.cshtml.g.cs
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibraryMVC\obj\Debug\netcoreapp3.1\Razor\Views\Word\Form.cshtml.g.cs
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\Mono.Security.dll
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\Npgsql.EntityFramework.dll
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\de\Npgsql.resources.dll
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\es\Npgsql.resources.dll
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\fi\Npgsql.resources.dll
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\fr\Npgsql.resources.dll
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\ja\Npgsql.resources.dll
+C:\Users\serwi\Documents\ComITLibraryFull\ComITLibraryMVC\bin\Debug\netcoreapp3.1\zh-CN\Npgsql.resources.dll

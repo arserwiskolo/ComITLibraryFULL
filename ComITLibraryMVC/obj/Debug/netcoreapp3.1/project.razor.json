@@ -14392,8 +14392,8 @@
   "RootNamespace": "ComITLibraryMVC",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\Views\\Word\\game.cshtml",
-      "TargetPath": "Views\\Word\\game.cshtml",
+      "FilePath": "c:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\Views\\Word\\Game.cshtml",
+      "TargetPath": "Views\\Word\\Game.cshtml",
       "FileKind": "mvc"
     },
     {

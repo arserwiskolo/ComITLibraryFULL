@@ -5,50 +5,46 @@
 <div>
     Game Page
 </div>
-
+<div class="blockquote text-center">
 <hr/>
 <div>
-
-    <table class="table table-hover">
     <thead>
         <tr>
         
-        <th scope="col">This is your word to guess. Word category is @Model.Category</th>
+        <th scope="col">Do you think you know words?  Let's check it out, word category is @Model.Category.</th>
         </tr>
     </thead>
     <tbody>
         
         <tr>            
-            <td>@Model.Value</td>
-        </tr>
-         
+            <td><h4>@Model.Value</h4></td>
+        </tr>         
       
     </tbody>
+
+</table>
+<table align="center" >
+    <form asp-action="Enter" align="center">
+        
+        <div style="width:50px">
+            <div class="input-group-prepend">
+                <input type="hidden" value = "@Model.Category" asp-for="@Model.Category">
+                <input type="hidden" value = "@Model.Value" asp-for="@Model.Value">
+                <input type="hidden" value = "@Model.InitialWord" asp-for="@Model.InitialWord">
+            </div>
+            <div align="center">   
+                <input type="text" class="form-control" maxlength="1" placeholder="Enter one letter . . . &#x23ce;" asp-for="Letter" value="" > 
+                <button type="submit" class="btn btn-primary">GUESS</button>
+            </div>
+
+
+               
+            
+            
+        </div>
+    
+    </form>
 </table>
 
-<form asp-action="Enter">
-    
-    <div class="input-group input-group-lg">
-        <div class="input-group-prepend">
-        @* <label class="input-group-text" >Type one letter:</label> *@
-        <input type="text" value = "@Model.Category" asp-for="@Model.Category">
-        <input type="text" value = "@Model.Value" asp-for="@Model.Value">
-        <input type="text" value = "@Model.InitialWord" asp-for="@Model.InitialWord">
-        
-        <input type="text" class="form-control" maxlength="1" placeholder="Enter a letter . . . &#x23ce;" asp-for="Letter" value=""  >
-        @* <input type="text" visibility="none" visible="no" asp-for="Category" value="@Model.Category"> *@
-        </div>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Send</button>
-</form>
-
-@* <div class="input-group input-group-lg">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-lg">Type one letter</span>
-    </div>
-    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>   *@
-
-
+</div>
 </div>

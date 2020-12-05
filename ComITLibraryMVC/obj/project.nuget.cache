@@ -1,8 +1,43 @@
 {
   "version": 2,
-  "dgSpecHash": "BQ2bCd2B8QRG8CxElWQBMlwK1eBAIOvkyh+Ftui+Xkh9T927VUyIvwoX0bQXTYZHh9Q02dOGZkDXNejJ61EIOA==",
+  "dgSpecHash": "7JLCm+WQ/mjvn4RotJIFw0TVUwaif+yj24j3bHDTBy0SZ1WUn9FCOv6uSWD9VReTAjH97KHXLsb/yi4+4fJRqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\ComITLibraryMVC.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\serwi\\.nuget\\packages\\entityframework\\6.0.0\\entityframework.6.0.0.nupkg.sha512",
+    "C:\\Users\\serwi\\.nuget\\packages\\npgsql\\2.2.7\\npgsql.2.2.7.nupkg.sha512",
+    "C:\\Users\\serwi\\.nuget\\packages\\npgsql.entityframework\\2.2.7\\npgsql.entityframework.2.2.7.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework 6.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Npgsql 2.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Npgsql",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Npgsql.EntityFramework 2.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Npgsql.EntityFramework",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
