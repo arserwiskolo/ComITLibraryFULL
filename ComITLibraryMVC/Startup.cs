@@ -32,7 +32,7 @@ namespace ComITLibraryMVC
             // var wordStorage = new WordStorageList();
             // var playerStorage = new PlayerStorageList();
             // var library = new WordGuess.WordGuessSystem(wordStorage, playerStorage);
-            string connectionString = "Host=suleiman.db.elephantsql.com;Port=5432;Database=xizscvyd;Username=xizscvyd;Password=T5TTnkR11cTMmAxBU_mf5b73olGSYGSm;";
+            
             services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(connectionString, b=>b.MigrationsAssembly("ComITLibraryMVC")));
 
             services.AddScoped<IStoreWords, WordStorageEF>();

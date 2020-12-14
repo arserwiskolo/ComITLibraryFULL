@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UJ0kisiu5U82ZvIA8z127TnQVvJVkvcvUFfB8pRae0U4bxwoGh5W5HCX3qe1I+Vd9xpnvgL+dJdcxr4+flCObw==",
+  "dgSpecHash": "1D1qIBwmp+6rmmDGWucOH8K2S/MEbCzULhofAm5hn/bVx9rFlHj0pwyvltf4sP+KndHUUVztqxTjx/ugr/a/cw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\ComITLibraryMVC.csproj",
+  "projectFilePath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\serwi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\serwi\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

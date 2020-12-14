@@ -1,7 +1,6 @@
 @using WordGuess.Models
 @model WordGuess.Models.Word;
 
-
 <div>
     <h2>Game ON!</h2>
 </div>
@@ -9,31 +8,26 @@
 <hr/>
 <div>
     <thead>
-        <tr>
         
-        <th scope="col">Do you think you know words?  Let's check it out, word category is @Model.Category.</th>
-        <th scope="col">You have @Model.NoOfTries tries.</th>
-        </tr>
+            <h2>Do you think you know words?  Let's check it out, word category is @Model.Category.</h2>
+            <p>&nbsp;</p>
+            <h2>You have @Model.NoOfTries tries.</h2>
+            @* <th scope="col">@Model.Category.</th>
+            <th scope="col">You have @Model.NoOfTries tries.</th> *@
+        
     </thead>
     <tbody>
         <p>&nbsp;</p>
         
         <tr>            
             <h2>@Model.Value</h2>
-
-
         </tr>         
       
     </tbody>
-  <p>&nbsp;</p>
+    <p>&nbsp;</p>
          <tr>
-             
-            @* if(@Model.Message <> string.empty()  ){
-            <th scope="col">Message: @Model.Message</th>
-        } *@
-          <th scope="col">@Model.Message</th>  
-       
-        </tr> 
+            <th scope="col">@Model.Message</th>  
+         </tr> 
         <p>&nbsp;</p>
 </table>
 <table align="center" >

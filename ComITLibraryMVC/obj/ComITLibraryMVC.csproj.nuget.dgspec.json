@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\ComITLibraryMVC.csproj": {}
+    "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\ComITLibraryMVC.csproj": {
+    "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\ComITLibraryMVC.csproj",
+        "projectUniqueName": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj",
         "projectName": "ComITLibraryMVC",
-        "projectPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\ComITLibraryMVC.csproj",
+        "projectPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj",
         "packagesPath": "C:\\Users\\serwi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\obj\\",
+        "outputPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
