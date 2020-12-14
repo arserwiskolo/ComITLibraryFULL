@@ -37,15 +37,17 @@ namespace ComITLibraryMVC.Controllers
         public IActionResult Game(Word selectedWord){
             Word gameWord = new Word();
             if(selectedWord.Value is null){
-                var wordIndex = _library.RandomNumber(1, 12);
+                var wordIndex = _library.RandomNumber(1);
                 List<Word> wordList = _library.GetAllWords();
                 gameWord.InitialWord = selectedWord.Value;
                 gameWord = _library.HideLetters(wordIndex, wordList);
+                gameWord.NoOfTries =  gameWord.Value.Count();
             } 
             else{
                 gameWord.Category = selectedWord.Category;
                 gameWord.InitialWord = selectedWord.InitialWord;
                 gameWord.Value = selectedWord.Value;
+                gameWord.NoOfTries = selectedWord.NoOfTries;
             }     
             return View(gameWord);            
         }
@@ -53,18 +55,43 @@ namespace ComITLibraryMVC.Controllers
 
         [HttpPost]
         public IActionResult Enter(Word selectedWord){
+            int NoOfTries = selectedWord.NoOfTries;
             char letter = selectedWord.Letter;
             Boolean letterFound = _library.FindLetterInWord(letter, selectedWord);
             Word newWord = new Word();
             newWord.Category = selectedWord.Category;
             newWord.InitialWord = selectedWord.InitialWord;
-            if (letterFound){
-               newWord = _library.exposeLetters(letter, selectedWord, selectedWord.Value);
-               newWord.Message = "Congratulations, you have found a letter!.";
-            }
-            else {
+            selectedWord.NoOfTries = selectedWord.NoOfTries-1;
+            if(selectedWord.NoOfTries<=0)
+            {
                 newWord=selectedWord;
+                newWord.Message ="Sorry, maybe next time. Press Game to play again";
+                newWord.NoOfTries=0;
             }
+            else 
+            {
+                if (!letterFound)
+                {
+                    newWord=selectedWord;
+                    newWord.Message ="Missed....";
+                }
+                else 
+                {
+                    newWord = _library.exposeLetters(letter, selectedWord, selectedWord.Value);
+                    if(newWord.Value==newWord.InitialWord)
+                    {
+                      newWord.Message = "WOW....You have found a word. CONGRATS!";
+                      newWord.NoOfTries = 0;  
+                    }
+                    else 
+                    {
+                      newWord.Message = "Congratulations, you have found a letter!.";
+                    }
+                                  
+                }
+
+            }
+      
         return View("Game", newWord);
 
         }
@@ -83,3 +110,28 @@ namespace ComITLibraryMVC.Controllers
         // }
     }
 }
+
+
+
+//   if (letterFound){
+//                newWord = _library.exposeLetters(letter, selectedWord, selectedWord.Value);
+//                newWord.Message = "Congratulations, you have found a letter!.";
+//                newWord.NoOfTries = NoOfTries-1;
+//             }
+//             else {
+//                 if(selectedWord.NoOfTries > 0 )
+//                 {
+//                     newWord=selectedWord;
+//                     newWord.Message ="Missed....";
+//                     newWord.NoOfTries = NoOfTries-1;
+//                 }
+//                else if(selectedWord.NoOfTries == 0 )
+//                 {
+//                     newWord=selectedWord;
+//                     newWord.Message ="Sorry, maybe next time. Press Game to play again";
+//                 }
+                
+//             }
+//         return View("Game", newWord);
+
+//         }

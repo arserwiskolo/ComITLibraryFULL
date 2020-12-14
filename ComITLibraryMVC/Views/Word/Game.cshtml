@@ -3,7 +3,7 @@
 
 
 <div>
-    Game Page
+    <h2>Game ON!</h2>
 </div>
 <div class="blockquote text-center">
 <hr/>
@@ -12,39 +12,55 @@
         <tr>
         
         <th scope="col">Do you think you know words?  Let's check it out, word category is @Model.Category.</th>
+        <th scope="col">You have @Model.NoOfTries tries.</th>
         </tr>
     </thead>
     <tbody>
+        <p>&nbsp;</p>
         
         <tr>            
-            <td><h4>@Model.Value</h4></td>
+            <h2>@Model.Value</h2>
+
+
         </tr>         
       
     </tbody>
-
+  <p>&nbsp;</p>
+         <tr>
+             
+            @* if(@Model.Message <> string.empty()  ){
+            <th scope="col">Message: @Model.Message</th>
+        } *@
+          <th scope="col">@Model.Message</th>  
+       
+        </tr> 
+        <p>&nbsp;</p>
 </table>
 <table align="center" >
     <form asp-action="Enter" align="center">
         
-        <div style="width:50px">
+        <div>
             <div class="input-group-prepend">
                 <input type="hidden" value = "@Model.Category" asp-for="@Model.Category">
                 <input type="hidden" value = "@Model.Value" asp-for="@Model.Value">
                 <input type="hidden" value = "@Model.InitialWord" asp-for="@Model.InitialWord">
+                <input type="hidden" value = "@Model.NoOfTries" asp-for="@Model.NoOfTries">
             </div>
-            <div align="center">   
-                <input type="text" class="form-control" maxlength="1" placeholder="Enter one letter . . . &#x23ce;" asp-for="Letter" value="" > 
+            <div class="col-6 col-md-6 offset-md-3">   
+                <input type="text" class="form-control"  maxlength="1" placeholder="Enter one letter . . . &#x23ce;" asp-for="Letter" value="" > 
                 <button type="submit" class="btn btn-primary">GUESS</button>
             </div>
 
-
-               
-            
-            
         </div>
+
+
     
     </form>
-</table>
 
+
+    
+      
+    
+</table>
 </div>
 </div>

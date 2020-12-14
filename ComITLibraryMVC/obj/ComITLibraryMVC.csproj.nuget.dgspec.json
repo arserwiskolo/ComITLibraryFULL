@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj": {}
+    "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\ComITLibraryMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj": {
+    "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\ComITLibraryMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj",
+        "projectUniqueName": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\ComITLibraryMVC.csproj",
         "projectName": "ComITLibraryMVC",
-        "projectPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\ComITLibraryMVC.csproj",
+        "projectPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\ComITLibraryMVC.csproj",
         "packagesPath": "C:\\Users\\serwi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\comitlibrarymvc\\obj\\",
+        "outputPath": "C:\\Users\\serwi\\Documents\\ComITLibraryFull\\ComITLibraryMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -46,9 +46,19 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Npgsql.EntityFramework": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.7, )"
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.3, )"
             }
           },
           "imports": [
@@ -111,9 +121,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Npgsql.EntityFramework": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.2.7, )"
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.3, )"
             }
           },
           "imports": [

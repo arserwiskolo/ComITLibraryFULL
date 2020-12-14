@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WordGuess;
 using WordGuess.Storage;
-using WordGuess.Models;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace ComITLibraryMVC
@@ -22,18 +22,22 @@ namespace ComITLibraryMVC
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
             // dependecies injection
-            var wordStorage = new WordStorageList();
-            var playerStorage = new PlayerStorageList();
-            var library = new WordGuess.WordGuessSystem(wordStorage, playerStorage);
+            // var wordStorage = new WordStorageList();
+            // var playerStorage = new PlayerStorageList();
+            // var library = new WordGuess.WordGuessSystem(wordStorage, playerStorage);
+            string connectionString = "Host=suleiman.db.elephantsql.com;Port=5432;Database=xizscvyd;Username=xizscvyd;Password=T5TTnkR11cTMmAxBU_mf5b73olGSYGSm;";
+            services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(connectionString, b=>b.MigrationsAssembly("ComITLibraryMVC")));
 
-            services.AddSingleton<WordGuess.WordGuessSystem>(library);
+            services.AddScoped<IStoreWords, WordStorageEF>();
+            services.AddScoped<IStorePlayers, PlayerStorageEF>();
+            services.AddScoped<WordGuessSystem>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
