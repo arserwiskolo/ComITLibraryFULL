@@ -9,10 +9,6 @@ using WordGuess.Models;
 
 namespace ComITLibraryMVC.Controllers
 {
-    // public class Word{
-    //     public string Value {get; set;}
-    //     public string Category{get; set;}
-    // }
     public  class WordController : Controller
     {
         private static WordGuess.WordGuessSystem _library;
@@ -52,44 +48,54 @@ namespace ComITLibraryMVC.Controllers
             return View(gameWord);            
         }
 
-
         [HttpPost]
         public IActionResult Enter(Word selectedWord){
             int NoOfTries = selectedWord.NoOfTries;
             char letter = selectedWord.Letter;
-            Boolean letterFound = _library.FindLetterInWord(letter, selectedWord);
             Word newWord = new Word();
             newWord.Category = selectedWord.Category;
             newWord.InitialWord = selectedWord.InitialWord;
-            selectedWord.NoOfTries = selectedWord.NoOfTries-1;
-            if(selectedWord.NoOfTries<=0)
-            {
-                newWord=selectedWord;
-                newWord.Message ="Sorry, maybe next time. Press Game to play again";
-                newWord.NoOfTries=0;
+            selectedWord.NoOfTries = selectedWord.NoOfTries-1; 
+            
+            if(letter =='\0')
+            {  newWord=selectedWord;
+               newWord.Message ="You typed no letter!";
+               newWord.NoOfTries=NoOfTries;
+               newWord.Value = selectedWord.Value;
             }
-            else 
+            else
             {
-                if (!letterFound)
+                Boolean letterFound = _library.FindLetterInWord(letter, selectedWord);
+                
+                 
+                if(selectedWord.NoOfTries<=0 && !letterFound)
                 {
                     newWord=selectedWord;
-                    newWord.Message ="Missed....";
+                    newWord.Message ="Sorry, maybe next time. Press Game to play again";
+                    newWord.NoOfTries=0;
                 }
                 else 
                 {
-                    newWord = _library.exposeLetters(letter, selectedWord, selectedWord.Value);
-                    if(newWord.Value==newWord.InitialWord)
+                    if (!letterFound)
                     {
-                      newWord.Message = "WOW....You have found a word. CONGRATS!";
-                      newWord.NoOfTries = 0;  
+                        newWord=selectedWord;
+                        newWord.Message ="Missed....";
                     }
                     else 
                     {
-                      newWord.Message = "Congratulations, you have found a letter!.";
+                        newWord = _library.exposeLetters(letter, selectedWord, selectedWord.Value);
+                        if(newWord.Value==newWord.InitialWord)
+                        {
+                        newWord.Message = "WOW....You have found a word. CONGRATS! Press WORDGAME to play again.";
+                        newWord.NoOfTries = 0;  
+                        }
+                        else 
+                        {
+                        newWord.Message = "Congratulations, you have found a letter!.";
+                        }
+                                    
                     }
-                                  
                 }
-
             }
       
         return View("Game", newWord);

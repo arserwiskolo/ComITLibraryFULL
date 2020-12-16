@@ -60,3 +60,8 @@ C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Debug\netcoreapp3.
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Debug\netcoreapp3.1\publish\appsettings.Development.json
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Debug\netcoreapp3.1\publish\appsettings.json
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Debug\netcoreapp3.1\publish\ComITLibraryMVC.runtimeconfig.json
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Debug\netcoreapp3.1\publish\web.config
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Debug\netcoreapp3.1\publish\ComITLibraryMVC.deps.json
