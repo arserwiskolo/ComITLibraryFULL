@@ -65,3 +65,8 @@ C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Release\netcoreapp
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Release\netcoreapp3.1\publish\appsettings.json
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Release\netcoreapp3.1\publish\ComITLibraryMVC.deps.json
 C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Release\netcoreapp3.1\publish\ComITLibraryMVC.runtimeconfig.json
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Release\netcoreapp3.1\publish\publish\web.config
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Release\netcoreapp3.1\publish\publish\appsettings.Development.json
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Release\netcoreapp3.1\publish\publish\appsettings.json
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Release\netcoreapp3.1\publish\publish\ComITLibraryMVC.deps.json
+C:\Users\serwi\Documents\ComITLibraryFull\comitlibrarymvc\bin\Release\netcoreapp3.1\publish\publish\ComITLibraryMVC.runtimeconfig.json

@@ -91,7 +91,7 @@ namespace ComITLibraryMVC.Controllers
                         }
                         else 
                         {
-                        newWord.Message = "Congratulations, you have found a letter!.";
+                        newWord.Message = "Congratulations, you have found a letter!";
                         }
                                     
                     }
